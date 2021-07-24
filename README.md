@@ -1,4 +1,4 @@
-# Natural-Language-Processing
+# Natural Language Processing
 
 ### 1. Lexical Analyzer
 Lexical Analyzer Development. Look at internet or you develop a Word Analyzer that reads a short story and can generate a list of sentences, each of which contains a list of words. 
