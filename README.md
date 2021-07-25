@@ -3,7 +3,7 @@
 ### 1. Lexical Analyzer
 Lexical Analyzer Development. Look at internet or you develop a Word Analyzer that reads a short story and can generate a list of sentences, each of which contains a list of words. 
 
-### 2. Synxtax Analyzer
+### 2. Syntactic Analyzer
 Syntactic Analyzer Development. Search online or you develop a Syntactic Analyzer based on the rules syntactic analysis of the standard solution in Prolog given to you produces the editorial tree of the sentence.
 
 ### 3. Semantic Analyzer
