@@ -15,6 +15,7 @@ Useful links:
 import nltk
 from  nltk.tokenize import word_tokenize
 import spacy
+nlp = spacy.load("en_core_web_sm")
 import pandas as pd
 from options_menu import OptionsMenu as om
 
@@ -39,13 +40,19 @@ while True:
     try:
         choice = int(menu_choice.print_options_menu())
 
+        # Read a new file (story) for the NLP
         if(choice == 1):
             pass
 
+        # Ask a question the knowledge base
         if(choice == 2):
             pass
 
+        # Print out the knowledge base
         if(choice == 3):
+            pass
+
+        if(choice == 4):
             exit(0)
 
         if(choice < 1 or choice > 3): 
