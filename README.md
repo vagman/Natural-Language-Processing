@@ -1,6 +1,6 @@
 # Natural Language Processing
 
-### 1. Lexical Analyzer
+### 1. Lexical Analyzer :heavy_check_mark: 
 Lexical Analyzer Development. Look at internet or you develop a Word Analyzer that reads a short story and can generate a list of sentences, each of which contains a list of words. 
 
 ### 2. Syntactic Analyzer
