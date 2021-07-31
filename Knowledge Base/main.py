@@ -14,8 +14,8 @@ Useful links:
 
 import nltk
 from  nltk.tokenize import word_tokenize
-import spacy
-nlp = spacy.load("en_core_web_sm")
+# import spacy
+# nlp = spacy.load("en_core_web_sm")
 import pandas as pd
 from options_menu import OptionsMenu as om
 
@@ -28,11 +28,21 @@ def read_story(filename: str):
 
 # Creates a list of all the words
 def create_knowledge_base():
-    data_source = read_story("Knowledge Base/story.txt")
-    return word_tokenize(data_source)
+    return word_tokenize(read_story("Knowledge Base/story.txt"))
 
-# tagged = nltk.pos_tag(create_knowledge_base())
-# print(tagged)
+# Create PartsOfSpeech (POS) tagging
+def create_pos_relations():
+    return nltk.pos_tag(create_knowledge_base())
+
+
+print(nltk.ne_chunk(create_pos_relations(), binary=True))
+
+
+
+
+
+
+
 
 while True:
     menu_choice = om()
