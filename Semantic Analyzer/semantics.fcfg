@@ -18,12 +18,12 @@ Q[SEM='Receiver'] -> 'who is'
 R[SEM=("Receiver='john'")] -> 'to john' 
 R[SEM=("Receiver='mary'")] -> 'to mary' 
 R[SEM=("Receiver='tomy'")] -> 'to tomy' 
- 
-N[SEM=("Noun='dog'")] -> 'dog' | 'dogs' 
-N[SEM=("Noun='food'")] -> 'food' | 'foods' 
-N[SEM=("Noun='cat'")] -> 'cat' | 'cats' 
-N[SEM=("Noun='book'")] -> 'book' | 'books' 
- 
+
+N[SEM=("Noun='dog'")]-> 'dog' | 'dogs' 
+N[SEM=("Noun='food'")]-> 'food' | 'foods' 
+N[SEM=("Noun='cat'")]-> 'cat' | 'cats' 
+N[SEM=("Noun='book'")]-> 'book' | 'books'
+
 V[SEM="Verb='need'"] -> 'need' | 'needs' 
 V[SEM="Verb='hate'"] -> 'hate' | 'hates' 
 V[SEM="Verb='chase'"] -> 'chase' | 'chases' 
@@ -43,11 +43,9 @@ IV[SEM="Intransitive_Verb='walk'"] -> 'walks' | 'walking'
 IV[SEM="Intransitive_Verb='jump'"] -> 'jumps' | 'jumping'
 IV[SEM="Intransitive_Verb='shoot'"] -> 'shoots' | 'shooting'
 
-AV[SEM="Auxiliary_Verb='shoot'"] ->
-
 AV[SEM='-'] -> 'is' | 'does' | 'do' | 'did' | 'are'
 TV[SEM="Transitive_Verb='give'"] -> 'gives' | 'give' | 'gave' | 'giving' 
-
-
  
 ADV[SEM="Adverb='quickly'"] -> 'quickly'
+ADV[SEM="Adverb='slowly'"] -> 'slowly'
+ADV[SEM="Adverb='independently'"] -> 'independently'
