@@ -1,0 +1,53 @@
+% start S 
+S[SEM=('SELECT'+?q + 'FROM knowledge WHERE' + ?p)] -> Q[SEM=?q] P[SEM=?p] 
+
+P[SEM=(?v+' AND '+?n)] -> V[SEM=?v] N[SEM=?n] 
+P[SEM=?v] -> V[SEM=?v] 
+P[SEM=?adj] -> ADJ[SEM=?adj] 
+P[SEM=?iv] -> IV[SEM=?iv] 
+P[SEM=(?iv+' AND '+?adv)] -> IV[SEM=?iv]  ADV[SEM=?adv] 
+P[SEM=?tv] -> TV[SEM=?tv] 
+P[SEM=(?tv+' AND '+?n)] -> TV[SEM=?tv]  N[SEM=?n] 
+P[SEM=(?tv+' AND '+?r)] -> TV[SEM=?tv]  R[SEM=?r] 
+ 
+Q[SEM='Name'] -> 'who' 
+Q[SEM='Noun'] -> 'what' | 'what is' 
+Q[SEM='Adverb'] -> 'how' 
+Q[SEM='Receiver'] -> 'who is' 
+ 
+R[SEM=("Receiver='john'")] -> 'to john' 
+R[SEM=("Receiver='mary'")] -> 'to mary' 
+R[SEM=("Receiver='tomy'")] -> 'to tomy' 
+ 
+N[SEM=("Noun='dog'")] -> 'dog' | 'dogs' 
+N[SEM=("Noun='food'")] -> 'food' | 'foods' 
+N[SEM=("Noun='cat'")] -> 'cat' | 'cats' 
+N[SEM=("Noun='book'")] -> 'book' | 'books' 
+ 
+V[SEM="Verb='need'"] -> 'need' | 'needs' 
+V[SEM="Verb='hate'"] -> 'hate' | 'hates' 
+V[SEM="Verb='chase'"] -> 'chase' | 'chases' 
+V[SEM="Verb='love'"] -> 'love' | 'loves' 
+V[SEM="Verb='have'"] -> 'have' | 'has' 
+ 
+ADJ[SEM="Adjective='scary'"] -> 'scary' 
+ADJ[SEM="Adjective='tall'"] -> 'tall' 
+ADJ[SEM="Adjective='short'"] -> 'short' 
+ADJ[SEM="Adjective='blonde'"] -> 'blonde' 
+ADJ[SEM="Adjective='slim'"] -> 'slim' 
+ADJ[SEM="Adjective='fat'"] -> 'fat' 
+
+IV[SEM="Intransitive_Verb='run'"] -> 'runs' | 'running'
+IV[SEM="Intransitive_Verb='hurt'"] -> 'hurts' | 'hurting'
+IV[SEM="Intransitive_Verb='walk'"] -> 'walks' | 'walking'
+IV[SEM="Intransitive_Verb='jump'"] -> 'jumps' | 'jumping'
+IV[SEM="Intransitive_Verb='shoot'"] -> 'shoots' | 'shooting'
+
+AV[SEM="Auxiliary_Verb='shoot'"] ->
+
+AV[SEM='-'] -> 'is' | 'does' | 'do' | 'did' | 'are'
+TV[SEM="Transitive_Verb='give'"] -> 'gives' | 'give' | 'gave' | 'giving' 
+
+
+ 
+ADV[SEM="Adverb='quickly'"] -> 'quickly'

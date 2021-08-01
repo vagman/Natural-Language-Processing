@@ -1,4 +1,3 @@
-from nltk import tokenize
 from read_file import ReadFile
 from tokenizer import Tokenizer
 from write_file import WriteFile
