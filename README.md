@@ -9,7 +9,7 @@ Syntactic Analyzer Development. Search online or you develop a Syntactic Analyze
 ### 3. Semantic Analyzer :heavy_check_mark: 
 Semantic Analyzer Development. Search the internet or develop your own Semantic Analyzer with me based on the rules of semantic analysis of the standard solution in Prolog that given to you produces the meanings of the sentence (relations between verbs, nouns, adjectives, etc.) 
 
-### 4. Knowledge Base
+### 4. Knowledge Base :heavy_check_mark:
 Program for updating and conducting questions and answers on a Knowledge Base that you have developed for this very purpose. Questions and answers will be given to natural language. 
 
 ### General Info

@@ -11,12 +11,12 @@ class DbCreation():
         sql_file = file.read()
         file.close()
 
-        # Add diffrent commands in a listAll SQL commands split on ';'
+        # Add diffrent commands in a list. All SQL commands split on ';'
         sql_queries = sql_file.split(";")
         
         # Execute
         for query in sql_queries:
             try:
-                connection.execute(query)
+                connection.executescript(query)
             except sqlite3.OperationalError as err:
-                print("Command skipped: {}".format(err))
+                print("Command of creating db skipped: {}\n".format(err))

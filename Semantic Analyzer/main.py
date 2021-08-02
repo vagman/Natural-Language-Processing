@@ -7,18 +7,20 @@ db = DbCreation()
 db.execute_sql_script("knowledge_base.sql")
 
 # Load our semanctics file
+print("Loading grammar..\n")
 grammar = load("semantics.fcfg")
 cemantics_parser = load_parser("semantics.fcfg")
 
-query = 'who loves book'
-trees = list(cemantics_parser.parse(query.split()))
+# query = "who love book"
+input_query = str(input("Examples of questions you can make to the NLP: 'who loves books', 'who gave dog', 'who hates cat'..\nEnter tour question: "))
+trees = list(cemantics_parser.parse(input_query.split()))
 answer = trees[0].label()["SEM"]
 answer = [s for s in answer if s]
 q = " ".join(answer)
-print(q)
 
-sqliteConnection = sqlite3.connect("knowledge_base")
+sqliteConnection = sqlite3.connect("knowledge_base.db")
 cursor = sqliteConnection.cursor()
+cursor.execute(q + ";")
 records = cursor.fetchall()
 for row in records:
     print(row[0])
