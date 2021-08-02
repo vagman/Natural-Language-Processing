@@ -29,7 +29,7 @@ V[SEM="Verb='hate'"] -> 'hate' | 'hates'
 V[SEM="Verb='chase'"] -> 'chase' | 'chases' 
 V[SEM="Verb='love'"] -> 'love' | 'loves' 
 V[SEM="Verb='have'"] -> 'have' | 'has' 
- 
+
 ADJ[SEM="Adjective='scary'"] -> 'scary' 
 ADJ[SEM="Adjective='tall'"] -> 'tall' 
 ADJ[SEM="Adjective='short'"] -> 'short' 

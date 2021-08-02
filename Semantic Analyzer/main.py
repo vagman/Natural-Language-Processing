@@ -1,23 +1,24 @@
-from nltk import load_parser, load
 import sqlite3
+from nltk import load_parser, load
+from db_creation import DbCreation
+
+# Initialize DbCreation object to create db for the first time
+db = DbCreation()
+db.execute_sql_script("knowledge_base.sql")
 
 # Load our semanctics file
-grammar = load('semantics.fcfg')
-
-# show_cfg('semanctics.fcfg')
-cemantics_parser = load_parser('semantics.fcfg')
+grammar = load("semantics.fcfg")
+cemantics_parser = load_parser("semantics.fcfg")
 
 query = 'who loves book'
 trees = list(cemantics_parser.parse(query.split()))
-
-answer = trees[0].label()['SEM']
+answer = trees[0].label()["SEM"]
 answer = [s for s in answer if s]
-q = ' '.join(answer)
+q = " ".join(answer)
 print(q)
 
-sqliteConnection = sqlite3.connect('knowledge_db')
+sqliteConnection = sqlite3.connect("knowledge_base")
 cursor = sqliteConnection.cursor()
-cursor.execute(q + ";")
 records = cursor.fetchall()
 for row in records:
     print(row[0])
