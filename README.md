@@ -14,3 +14,5 @@ Program for updating and conducting questions and answers on a Knowledge Base th
 
 ### General Info
 * Python version: [3.9.6](https://www.python.org/downloads/release/python-396/)
+* [NLTK](https://www.nltk.org/index.html) 3.6.2 
+* [Pillow](https://pypi.org/project/Pillow/) 8.3.1
